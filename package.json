@@ -1,0 +1,14 @@
+{
+  "name": "online-store",
+  "version": "1.0.0",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-less": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-connect": "^5.7.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0"
+  }
+}

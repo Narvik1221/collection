@@ -1,0 +1,39 @@
+// Подключение компонентов
+@import 'header.less';
+
+// Базовые стили для body
+body {
+   
+    margin: 0;
+    padding: 0;
+    
+    &.menu-open {
+        overflow: hidden;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+// Адаптивность контейнера
+@media (max-width: 1340px) {
+    .container {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        padding: 0 8px;
+    }
+}
