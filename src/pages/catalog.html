@@ -1,0 +1,107 @@
+@@include('../includes/header.html')
+
+<main class="main">
+    <section class="page-header">
+        <div class="container">
+            <h1>Каталог товаров</h1>
+            <p>Все товары в одном месте</p>
+        </div>
+    </section>
+
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog__layout">
+                <!-- Секция фильтров -->
+                <aside class="catalog__filters">
+                    <div class="filters__section">
+                        <h3>Категории</h3>
+                        <div class="filter-group">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input">
+                                <span class="checkbox__text">Электроника</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input">
+                                <span class="checkbox__text">Одежда</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input">
+                                <span class="checkbox__text">Дом и сад</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filters__section">
+                        <h3>Цена</h3>
+                        <div class="price-range">
+                            <div class="price-range__inputs">
+                                <input type="number" class="price-range__input" placeholder="0" min="0">
+                                <span>-</span>
+                                <input type="number" class="price-range__input" placeholder="200000" max="200000">
+                            </div>
+                            <div class="price-range__slider">
+                                <input type="range" class="range-input" min="0" max="200000" value="100000">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filters__section">
+                        <h3>Наличие</h3>
+                        <div class="toggle-group">
+                            <label class="toggle">
+                                <input type="checkbox" class="toggle__input">
+                                <span class="toggle__slider"></span>
+                                <span class="toggle__text">В наличии</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filters__section">
+                        <h3>Бренды</h3>
+                        <div class="filter-group">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input">
+                                <span class="checkbox__text">Apple</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input">
+                                <span class="checkbox__text">Sony</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input">
+                                <span class="checkbox__text">Samsung</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="filters__apply">Применить фильтры</button>
+                </aside>
+
+                <!-- Секция товаров -->
+                <div class="catalog__content">
+                    <div class="catalog__tools">
+                        <div class="catalog__sort">
+                            <select class="sort-select">
+                                <option value="popular">По популярности</option>
+                                <option value="price-asc">По возрастанию цены</option>
+                                <option value="price-desc">По убыванию цены</option>
+                                <option value="new">Сначала новые</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-grid" id="products-grid">
+                        <!-- Товары будут загружены через JavaScript -->
+                    </div>
+
+                    <!-- Пагинация -->
+                    <div class="pagination" id="pagination">
+                        <!-- Пагинация будет создана через JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('../includes/footer.html')

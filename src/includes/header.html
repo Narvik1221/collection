@@ -1,34 +1,59 @@
-<header class="header">
-    <div class="container">
-        <button class="header__burger" aria-label="Открыть меню">
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-        </button>
-
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Интернет-магазин</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
         <div class="header__logo">
-            <!-- Логотип будет здесь -->
+          <a href="/" class="logo-link">
+            <img src="../img/logo.svg" alt="Логотип" />
+          </a>
         </div>
 
-        <nav class="header__nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#" class="nav__link">Каталог</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
-            </ul>
-        </nav>
-
-        <div class="header__actions">
-            <button class="action-btn action-btn--search" aria-label="Поиск">
-                <span class="action-btn__icon"></span>
-            </button>
-            <button class="action-btn action-btn--favorite" aria-label="Избранное">
-                <span class="action-btn__icon"></span>
-            </button>
-            <button class="action-btn action-btn--cart" aria-label="Корзина">
-                <span class="action-btn__icon"></span>
-                <span class="action-btn__count">0</span>
-            </button>
+        <div class="header__catalog text-md">
+          <a href="catalog.html" class="header__catalog-link svg-button">
+            <img class="nav__link-img" src="../img/grid.svg" alt="Каталог" />
+            <span class="header__catalog-text">Каталог</span>
+          </a>
         </div>
-    </div>
-</header>
+
+        <div class="header__nav header__actions">
+          <a class="action-btn svg-button" href="#">
+            <img
+              class="action-btn__icon"
+              src="../img/heart.svg"
+              alt="Избранное"
+            />
+            <div class="action-btn-text">Избранное</div>
+          </a>
+          <a class="action-btn svg-button" href="#">
+            <img
+              class="action-btn__icon"
+              src="../img/bucket.svg"
+              alt="Корзина"
+            />
+            <div class="action-btn-text">Корзина</div>
+          </a>
+          <a class="action-btn svg-button" href="#">
+            <img
+              class="action-btn__icon"
+              src="../img/log-in.svg"
+              alt="Личный кабинет"
+            />
+            <div class="action-btn-text">Личный кабинет</div>
+          </a>
+        </div>
+        <button class="header__burger" aria-label="Открыть меню"></button>
+      </div>
+    </header>
+  </body>
+</html>

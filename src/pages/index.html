@@ -1,0 +1,95 @@
+@@include('../includes/header.html')
+
+<main class="main">
+  <!-- Секция героя -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero__title">Добро пожаловать в наш магазин</h1>
+      <p class="hero__subtitle">Лучшие товары по выгодным ценам</p>
+    </div>
+  </section>
+
+  <section class="slider-section">
+    <div class="swiper main-slider">
+      <div class="swiper-wrapper">
+        <!-- Слайды будут добавляться динамически или вручную -->
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <h3>Товар 1</h3>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <h3>Товар 2</h3>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <h3>Товар 3</h3>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <h3>Товар 4</h3>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <h3>Товар 5</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Стрелки навигации -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+
+  <!-- Секция преимуществ -->
+  <section class="advantages">
+    <div class="container">
+      <h2 class="section-title">Наши преимущества</h2>
+      <div class="advantages__grid">
+        <div class="advantage-card">
+          <h3>Быстрая доставка</h3>
+          <p>Доставляем заказы в течение 24 часов</p>
+        </div>
+        <div class="advantage-card">
+          <h3>Гарантия качества</h3>
+          <p>Все товары проходят строгий контроль</p>
+        </div>
+        <div class="advantage-card">
+          <h3>Поддержка 24/7</h3>
+          <p>Всегда готовы ответить на ваши вопросы</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Секция категорий -->
+  <section class="categories">
+    <div class="container">
+      <h2 class="section-title">Категории товаров</h2>
+      <div class="categories__grid">
+        <div class="category-card">
+          <h3>Электроника</h3>
+        </div>
+        <div class="category-card">
+          <h3>Одежда</h3>
+        </div>
+        <div class="category-card">
+          <h3>Дом и сад</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="map-section">
+    <div class="container">
+      <h2 class="section-title">Мы на карте</h2>
+      <div id="yandex-map" class="yandex-map"></div>
+    </div>
+  </section>
+</main>
+
+@@include('../includes/footer.html')

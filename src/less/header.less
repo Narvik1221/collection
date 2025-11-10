@@ -1,185 +1,161 @@
-// Переменные для брекпоинтов
-@breakpoint-desktop: 1920px;
 @breakpoint-laptop: 1340px;
 @breakpoint-tablet: 768px;
 @breakpoint-mobile: 320px;
 
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: transparent;
-    
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 80px;
-        position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: all 0.3s ease;
+  background-color: #f3f3f3;
+  .container {
+    height: 105px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+    position: relative;
+  }
+
+  &__burger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+
+    &.active {
+      background-image: url("../img/close.svg");
     }
+  }
 
-    &__burger {
-        display: none;
-        flex-direction: column;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 8px;
-        z-index: 1001;
+  &__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-        .burger__line {
-            width: 24px;
-            height: 2px;
-            background: currentColor;
-            margin: 3px 0;
-            transition: all 0.3s ease;
-            transform-origin: center;
-        }
+  .header__catalog-link {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
 
-        &.active {
-            .burger__line:nth-child(1) {
-                transform: rotate(45deg) translate(6px, 6px);
-            }
-            
-            .burger__line:nth-child(2) {
-                opacity: 0;
-            }
-            
-            .burger__line:nth-child(3) {
-                transform: rotate(-45deg) translate(6px, -6px);
-            }
-        }
+    &:hover {
+      color: #0154bb;
     }
+  }
 
-    &__logo {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+  &__actions {
+    display: flex;
+    gap: 50px;
+    align-items: center;
 
-    &__nav {
-        .nav__list {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            gap: 32px;
+    .action-btn {
+      transition: all 0.3s ease;
+
+      &:hover {
+        .action-btn__icon {
+          fill: #0154bb;
+          stroke: #0154bb;
         }
-
-        .nav__link {
-            text-decoration: none;
-            display: block;
-            transition: all 0.3s ease;
-        }
+      }
     }
+  }
 
-    &__actions {
-        display: flex;
-        gap: 16px;
-
-        .action-btn {
-            position: relative;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 8px;
-            
-            &__icon {
-                display: block;
-                width: 24px;
-                height: 24px;
-                background: currentColor;
-            }
-
-            &__count {
-                position: absolute;
-                top: 0;
-                right: 0;
-                background: red;
-                color: white;
-                border-radius: 50%;
-                width: 18px;
-                height: 18px;
-                font-size: 12px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transform: translate(25%, -25%);
-            }
-        }
-    }
+  &:hover {
+    box-shadow: 0px 0px 50px 0px #00000026;
+  }
 }
 
 // Адаптивность
 @media (max-width: @breakpoint-laptop) {
-    .header {
-        .container {
-            min-height: 70px;
-        }
+  .header {
+    .container {
+      min-height: 70px;
     }
+  }
 }
-
+.action-btn-text {
+  display: none;
+}
 @media (max-width: @breakpoint-tablet) {
-    .header {
-        &__burger {
-            display: flex;
-        }
-
-        &__nav {
-            position: fixed;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100vh;
-            background: white;
-            transition: left 0.3s ease;
-            z-index: 999;
-
-            &.active {
-                left: 0;
-            }
-
-            .nav__list {
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                height: 100%;
-                gap: 24px;
-            }
-
-            .nav__link {
-                font-size: 18px;
-            }
-        }
-
-        &__logo {
-            position: static;
-            transform: none;
-        }
-
-        .container {
-            min-height: 60px;
-        }
+  .header {
+    .container {
+      padding-top: 10px;
+      height: 100px;
     }
+    &__burger {
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/burger.svg");
+      display: flex;
+    }
+
+    &__nav {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      background: white;
+      transition: left 0.3s ease;
+      z-index: 999;
+
+      &.active {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        padding: 70px 30px;
+        margin-top: 100px;
+        left: 0;
+        .action-btn {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
+        .action-btn-text {
+          display: block;
+        }
+      }
+
+      .nav__link {
+        font-size: 18px;
+      }
+    }
+
+    .container {
+      min-height: 60px;
+    }
+  }
 }
 
 @media (max-width: @breakpoint-mobile) {
-    .header {
-        &__actions {
-            gap: 12px;
-            
-            .action-btn {
-                padding: 6px;
-                
-                &__icon {
-                    width: 20px;
-                    height: 20px;
-                }
-            }
-        }
+  .header__catalog-text {
+    display: none;
+  }
+  .header {
+    &__actions {
+      gap: 12px;
 
-        .container {
-            min-height: 56px;
+      .action-btn {
+        padding: 6px;
+
+        &__icon {
+          width: 20px;
+          height: 20px;
         }
+      }
     }
+
+    .container {
+      min-height: 56px;
+    }
+  }
 }

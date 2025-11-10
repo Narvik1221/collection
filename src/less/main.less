@@ -1,39 +1,132 @@
-// Подключение компонентов
-@import 'header.less';
+// Глобальные переменные для брекпоинтов
+@breakpoint-desktop: 1920px;
+@breakpoint-laptop: 1340px;
+@breakpoint-tablet: 768px;
+@breakpoint-mobile: 320px;
+@import "reset.less";
 
+@import "footer.less";
+// Подключение шрифтов
+@import "fonts.less";
+
+// Подключение компонентов
+@import "header.less";
+// Подключение компонентов
+@import "home.less";
+@import "components/yandex-map.less"; // Добавьте эту строку
+@import "catalog.less"; // Добавьте эту строку
 // Базовые стили для body
 body {
-   
-    margin: 0;
-    padding: 0;
-    
-    &.menu-open {
-        overflow: hidden;
-    }
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+
+  &.menu-open {
+    overflow: hidden;
+  }
+}
+
+// Классы для использования Moniqa
+.moniqa-font {
+  font-family: "Moniqa", serif;
+}
+
+// Пример применения Moniqa для заголовков
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Moniqa", serif;
+  font-weight: normal;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-// Адаптивность контейнера
-@media (max-width: 1340px) {
-    .container {
-        max-width: 100%;
-        padding: 0 16px;
-    }
+.text-md {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #111111;
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 0 12px;
-    }
+.text-md-bold {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #111111;
 }
 
-@media (max-width: 320px) {
-    .container {
-        padding: 0 8px;
-    }
+.text-lg {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #111111;
+}
+
+.text-lg-thin {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #111111;
+}
+
+@media (max-width: @breakpoint-tablet) {
+  .text-md-bold {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #111111;
+  }
+
+  .text-lg {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #111111;
+  }
+
+  .text-lg-thin {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #111111;
+  }
+}
+
+.svg-button {
+  transition: all 0.3s ease;
+  &:hover img {
+    filter: invert(15%) sepia(90%) saturate(3500%) hue-rotate(205deg)
+      brightness(90%) contrast(95%);
+  }
+  &:hover * {
+    color: #0154bb;
+  }
 }

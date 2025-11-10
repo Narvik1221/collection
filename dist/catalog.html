@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Интернет-магазин</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__logo">
+          <a href="/" class="logo-link">
+            <img src="../img/logo.svg" alt="Логотип" />
+          </a>
+        </div>
+
+        <div class="header__catalog text-md">
+          <a href="catalog.html" class="header__catalog-link svg-button">
+            <img class="nav__link-img" src="../img/grid.svg" alt="Каталог" />
+            <span class="header__catalog-text">Каталог</span>
+          </a>
+        </div>
+
+        <div class="header__nav header__actions">
+          <a class="action-btn svg-button" href="#">
+            <img
+              class="action-btn__icon"
+              src="../img/heart.svg"
+              alt="Избранное"
+            />
+            <div class="action-btn-text">Избранное</div>
+          </a>
+          <a class="action-btn svg-button" href="#">
+            <img
+              class="action-btn__icon"
+              src="../img/bucket.svg"
+              alt="Корзина"
+            />
+            <div class="action-btn-text">Корзина</div>
+          </a>
+          <a class="action-btn svg-button" href="#">
+            <img
+              class="action-btn__icon"
+              src="../img/log-in.svg"
+              alt="Личный кабинет"
+            />
+            <div class="action-btn-text">Личный кабинет</div>
+          </a>
+        </div>
+        <button class="header__burger" aria-label="Открыть меню"></button>
+      </div>
+    </header>
+  </body>
+</html>
+
+
+<main class="main">
+    <section class="page-header">
+        <div class="container">
+            <h1>Каталог товаров</h1>
+            <p>Все товары в одном месте</p>
+        </div>
+    </section>
+
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog__layout">
+                <!-- Секция фильтров -->
+                <aside class="catalog__filters">
+                    <div class="filters__section">
+                        <h3>Категории</h3>
+                        <div class="filter-group">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input">
+                                <span class="checkbox__text">Электроника</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input">
+                                <span class="checkbox__text">Одежда</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input">
+                                <span class="checkbox__text">Дом и сад</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filters__section">
+                        <h3>Цена</h3>
+                        <div class="price-range">
+                            <div class="price-range__inputs">
+                                <input type="number" class="price-range__input" placeholder="0" min="0">
+                                <span>-</span>
+                                <input type="number" class="price-range__input" placeholder="200000" max="200000">
+                            </div>
+                            <div class="price-range__slider">
+                                <input type="range" class="range-input" min="0" max="200000" value="100000">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filters__section">
+                        <h3>Наличие</h3>
+                        <div class="toggle-group">
+                            <label class="toggle">
+                                <input type="checkbox" class="toggle__input">
+                                <span class="toggle__slider"></span>
+                                <span class="toggle__text">В наличии</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filters__section">
+                        <h3>Бренды</h3>
+                        <div class="filter-group">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input">
+                                <span class="checkbox__text">Apple</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input">
+                                <span class="checkbox__text">Sony</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input">
+                                <span class="checkbox__text">Samsung</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="filters__apply">Применить фильтры</button>
+                </aside>
+
+                <!-- Секция товаров -->
+                <div class="catalog__content">
+                    <div class="catalog__tools">
+                        <div class="catalog__sort">
+                            <select class="sort-select">
+                                <option value="popular">По популярности</option>
+                                <option value="price-asc">По возрастанию цены</option>
+                                <option value="price-desc">По убыванию цены</option>
+                                <option value="new">Сначала новые</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-grid" id="products-grid">
+                        <!-- Товары будут загружены через JavaScript -->
+                    </div>
+
+                    <!-- Пагинация -->
+                    <div class="pagination" id="pagination">
+                        <!-- Пагинация будет создана через JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__top">
+    <a href="#">
+      <img src="../img/logo.svg" alt="" class="footer__top_img"
+    /></a>
+  </div>
+  <div class="container">
+    <div class="footer__bottom">
+      <div class="footer__sections">
+        <div class="footer__left">
+          <div class="footer__section">
+            <div class="footer__section_title text-lg">Каталог</div>
+            <ul class="footer__section_list">
+              <li><a class="text-lg-thin" href="#">Коллекция 1982</a></li>
+              <li><a class="text-lg-thin" href="#">Коллекция 1986</a></li>
+              <li><a class="text-lg-thin" href="#">Коллекция 1987</a></li>
+              <li><a class="text-lg-thin" href="#">Коллекция 1988</a></li>
+              <li><a class="text-lg-thin" href="#">Коллекция 1989</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__section">
+            <div class="footer__section_title text-lg">Покупателю</div>
+            <ul class="footer__section_list">
+              <li><a class="text-lg-thin" href="#">Как сделать заказ</a></li>
+              <li><a class="text-lg-thin" href="#">Правила возврата</a></li>
+              <li><a class="text-lg-thin" href="#">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__section last">
+          <div class="footer__section_title text-lg">На связи</div>
+          <div class="footer__section_links">
+            <a href="" class="footer__section_link">
+              <img src="../img/tg.svg" alt="" />
+            </a>
+            <a href="" class="footer__section_link">
+              <img src="../img/wp.svg" alt="" />
+            </a>
+            <a href="" class="footer__section_link">
+              <img src="../img/vk.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom_links">
+        <div class="footer__section_bottom-title text-md-bold">
+          <a href="# ">Политика конфиденциальности</a>
+        </div>
+
+        <div class="footer__section_bottom-title text-md-bold">
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+</html>

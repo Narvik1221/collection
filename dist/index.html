@@ -1,91 +1,217 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Интернет-магазин</title>
-    <link rel="stylesheet" href="css/style.min.css">
-
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
     <header class="header">
-    <div class="container">
-        <button class="header__burger" aria-label="Открыть меню">
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-        </button>
-
+      <div class="container">
         <div class="header__logo">
-            <!-- Логотип будет здесь -->
+          <a href="/" class="logo-link">
+            <img src="../img/logo.svg" alt="Логотип" />
+          </a>
         </div>
 
-        <nav class="header__nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#" class="nav__link">Каталог</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
-            </ul>
-        </nav>
-
-        <div class="header__actions">
-            <button class="action-btn action-btn--search" aria-label="Поиск">
-                <span class="action-btn__icon"></span>
-            </button>
-            <button class="action-btn action-btn--favorite" aria-label="Избранное">
-                <span class="action-btn__icon"></span>
-            </button>
-            <button class="action-btn action-btn--cart" aria-label="Корзина">
-                <span class="action-btn__icon"></span>
-                <span class="action-btn__count">0</span>
-            </button>
+        <div class="header__catalog text-md">
+          <a href="catalog.html" class="header__catalog-link svg-button">
+            <img class="nav__link-img" src="../img/grid.svg" alt="Каталог" />
+            <span class="header__catalog-text">Каталог</span>
+          </a>
         </div>
-    </div>
-</header>
 
-    <main class="main">
-        <section class="hero">
-            <div class="container">
-                <h1>Добро пожаловать в наш магазин</h1>
-            </div>
-        </section>
-        
-        <!-- Здесь будут другие секции -->
-    </main>
+        <div class="header__nav header__actions">
+          <a class="action-btn svg-button" href="#">
+            <img
+              class="action-btn__icon"
+              src="../img/heart.svg"
+              alt="Избранное"
+            />
+            <div class="action-btn-text">Избранное</div>
+          </a>
+          <a class="action-btn svg-button" href="#">
+            <img
+              class="action-btn__icon"
+              src="../img/bucket.svg"
+              alt="Корзина"
+            />
+            <div class="action-btn-text">Корзина</div>
+          </a>
+          <a class="action-btn svg-button" href="#">
+            <img
+              class="action-btn__icon"
+              src="../img/log-in.svg"
+              alt="Личный кабинет"
+            />
+            <div class="action-btn-text">Личный кабинет</div>
+          </a>
+        </div>
+        <button class="header__burger" aria-label="Открыть меню"></button>
+      </div>
+    </header>
+  </body>
+</html>
 
-    <footer class="footer">
+
+<main class="main">
+  <!-- Секция героя -->
+  <section class="hero">
     <div class="container">
-        <div class="footer__sections">
-            <div class="footer__section">
-                <h3>О компании</h3>
-                <p>Лучший магазин с качественными товарами</p>
-            </div>
-            
-            <div class="footer__section">
-                <h3>Контакты</h3>
-                <address>
-                    <p>Телефон: +7 (999) 999-99-99</p>
-                    <p>Email: info@store.ru</p>
-                </address>
-            </div>
-            
-            <div class="footer__section">
-                <h3>Соцсети</h3>
-                <div class="social-links">
-                    <a href="#">VK</a>
-                    <a href="#">Telegram</a>
-                    <a href="#">Instagram</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer__bottom">
-            <p>&copy; 2024 Магазин. Все права защищены.</p>
-        </div>
+      <h1 class="hero__title">Добро пожаловать в наш магазин</h1>
+      <p class="hero__subtitle">Лучшие товары по выгодным ценам</p>
     </div>
+  </section>
+
+  <section class="slider-section">
+    <div class="swiper main-slider">
+      <div class="swiper-wrapper">
+        <!-- Слайды будут добавляться динамически или вручную -->
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <h3>Товар 1</h3>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <h3>Товар 2</h3>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <h3>Товар 3</h3>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <h3>Товар 4</h3>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <h3>Товар 5</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Стрелки навигации -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+
+  <!-- Секция преимуществ -->
+  <section class="advantages">
+    <div class="container">
+      <h2 class="section-title">Наши преимущества</h2>
+      <div class="advantages__grid">
+        <div class="advantage-card">
+          <h3>Быстрая доставка</h3>
+          <p>Доставляем заказы в течение 24 часов</p>
+        </div>
+        <div class="advantage-card">
+          <h3>Гарантия качества</h3>
+          <p>Все товары проходят строгий контроль</p>
+        </div>
+        <div class="advantage-card">
+          <h3>Поддержка 24/7</h3>
+          <p>Всегда готовы ответить на ваши вопросы</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Секция категорий -->
+  <section class="categories">
+    <div class="container">
+      <h2 class="section-title">Категории товаров</h2>
+      <div class="categories__grid">
+        <div class="category-card">
+          <h3>Электроника</h3>
+        </div>
+        <div class="category-card">
+          <h3>Одежда</h3>
+        </div>
+        <div class="category-card">
+          <h3>Дом и сад</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="map-section">
+    <div class="container">
+      <h2 class="section-title">Мы на карте</h2>
+      <div id="yandex-map" class="yandex-map"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__top">
+    <a href="#">
+      <img src="../img/logo.svg" alt="" class="footer__top_img"
+    /></a>
+  </div>
+  <div class="container">
+    <div class="footer__bottom">
+      <div class="footer__sections">
+        <div class="footer__left">
+          <div class="footer__section">
+            <div class="footer__section_title text-lg">Каталог</div>
+            <ul class="footer__section_list">
+              <li><a class="text-lg-thin" href="#">Коллекция 1982</a></li>
+              <li><a class="text-lg-thin" href="#">Коллекция 1986</a></li>
+              <li><a class="text-lg-thin" href="#">Коллекция 1987</a></li>
+              <li><a class="text-lg-thin" href="#">Коллекция 1988</a></li>
+              <li><a class="text-lg-thin" href="#">Коллекция 1989</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__section">
+            <div class="footer__section_title text-lg">Покупателю</div>
+            <ul class="footer__section_list">
+              <li><a class="text-lg-thin" href="#">Как сделать заказ</a></li>
+              <li><a class="text-lg-thin" href="#">Правила возврата</a></li>
+              <li><a class="text-lg-thin" href="#">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__section last">
+          <div class="footer__section_title text-lg">На связи</div>
+          <div class="footer__section_links">
+            <a href="" class="footer__section_link">
+              <img src="../img/tg.svg" alt="" />
+            </a>
+            <a href="" class="footer__section_link">
+              <img src="../img/wp.svg" alt="" />
+            </a>
+            <a href="" class="footer__section_link">
+              <img src="../img/vk.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom_links">
+        <div class="footer__section_bottom-title text-md-bold">
+          <a href="# ">Политика конфиденциальности</a>
+        </div>
+
+        <div class="footer__section_bottom-title text-md-bold">
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.min.js"></script>
-
 </body>
 </html>
+
