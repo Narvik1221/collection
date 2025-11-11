@@ -3,21 +3,24 @@
 @breakpoint-laptop: 1340px;
 @breakpoint-tablet: 768px;
 @breakpoint-mobile: 320px;
-@import "reset.less";
+@import 'reset.less';
 
-@import "footer.less";
+@import 'footer.less';
 // Подключение шрифтов
-@import "fonts.less";
+@import 'fonts.less';
 
 // Подключение компонентов
-@import "header.less";
+@import 'header.less';
 // Подключение компонентов
-@import "home.less";
-@import "components/yandex-map.less"; // Добавьте эту строку
-@import "catalog.less"; // Добавьте эту строку
+@import 'main-top.less';
+@import 'main-map.less';
+@import 'main-author.less';
+@import 'main-slider.less';
+@import 'components/yandex-map.less'; // Добавьте эту строку
+@import 'catalog.less'; // Добавьте эту строку
 // Базовые стили для body
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
 
@@ -28,7 +31,29 @@ body {
 
 // Классы для использования Moniqa
 .moniqa-font {
-  font-family: "Moniqa", serif;
+  font-family: 'Moniqa', serif;
+}
+
+.button {
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 10px;
+  color: white;
+  background-color: #0154bb;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+.button:hover {
+  background-color: #1066d0;
 }
 
 // Пример применения Moniqa для заголовков
@@ -38,7 +63,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Moniqa", serif;
+  font-family: 'Moniqa', serif;
   font-weight: normal;
 }
 
@@ -47,13 +72,22 @@ h6 {
   margin: 0 auto;
   padding: 0 20px;
 }
+.text-thin {
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+
+  vertical-align: middle;
+  color: #111111;
+}
 
 .text-md {
   font-family: Montserrat;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
-  letter-spacing: 0%;
+
   vertical-align: middle;
   color: #111111;
 }
@@ -63,7 +97,7 @@ h6 {
   font-weight: 600;
   font-size: 16px;
   line-height: 100%;
-  letter-spacing: 0%;
+
   vertical-align: middle;
   color: #111111;
 }
@@ -73,7 +107,7 @@ h6 {
   font-weight: 600;
   font-size: 18px;
   line-height: 100%;
-  letter-spacing: 0%;
+
   vertical-align: middle;
   color: #111111;
 }
@@ -83,12 +117,53 @@ h6 {
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
-  letter-spacing: 0%;
+
   vertical-align: middle;
   color: #111111;
 }
+.title-sm {
+  font-family: Moniqa;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  vertical-align: middle;
+}
+.title-md {
+  font-family: Moniqa;
+  font-weight: 700;
+
+  font-size: 60px;
+
+  line-height: 100%;
+
+  vertical-align: middle;
+}
+
+.title-lg {
+  font-family: Moniqa;
+  font-weight: 700;
+
+  font-size: 84px;
+
+  line-height: 100%;
+
+  vertical-align: middle;
+}
+
+@media (max-width: 1340px) {
+  .title-lg {
+    font-size: 60px;
+  }
+  .title-sm {
+    font-size: 36px;
+  }
+}
 
 @media (max-width: @breakpoint-tablet) {
+  .title-sm {
+    font-size: 30px;
+  }
+
   .text-md-bold {
     font-family: Montserrat;
     font-weight: 600;
@@ -117,6 +192,22 @@ h6 {
     letter-spacing: 0%;
     vertical-align: middle;
     color: #111111;
+  }
+  .text-thin {
+    font-family: Montserrat;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+
+    vertical-align: middle;
+    color: #111111;
+  }
+  .title-md {
+    font-size: 36px;
+  }
+
+  .title-lg {
+    font-size: 36px;
   }
 }
 

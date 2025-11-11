@@ -212,6 +212,50 @@ svg {
   display: block;
 }
 
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul, ol, li {
+  list-style: none;
+}
+
+/* Remove default styling from links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove button defaults */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove form element defaults */
+input, textarea, select {
+  border: none;
+  background: none;
+  outline: none;
+}
+
 /* Отключаем подсветку при тапе на мобильных */
 @media (max-width: 768px) {
   * {
