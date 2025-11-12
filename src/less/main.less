@@ -3,24 +3,32 @@
 @breakpoint-laptop: 1340px;
 @breakpoint-tablet: 768px;
 @breakpoint-mobile: 320px;
-@import 'reset.less';
+@import "reset.less";
 
-@import 'footer.less';
+@import "footer.less";
 // Подключение шрифтов
-@import 'fonts.less';
+@import "fonts.less";
 
 // Подключение компонентов
-@import 'header.less';
+@import "header.less";
+@import "article-images.less";
 // Подключение компонентов
-@import 'main-top.less';
-@import 'main-map.less';
-@import 'main-author.less';
-@import 'main-slider.less';
-@import 'components/yandex-map.less'; // Добавьте эту строку
-@import 'catalog.less'; // Добавьте эту строку
+@import "main-top.less";
+@import "main-map.less";
+@import "main-author.less";
+@import "main-slider.less";
+@import "components/yandex-map.less"; // Добавьте эту строку
+@import "catalog.less"; // Добавьте эту строку
+@import "top-article.less"; // Добавьте эту строку
 // Базовые стили для body
+@import "article-middle.less"; // Добавьте эту строку
+
+@import "article-collection.less"; // Добавьте эту строку
+@import "catalog-aside.less";
+@import "card.less";
+@import "card-text.less";
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
 
@@ -31,7 +39,7 @@ body {
 
 // Классы для использования Moniqa
 .moniqa-font {
-  font-family: 'Moniqa', serif;
+  font-family: "Moniqa", serif;
 }
 
 .button {
@@ -63,20 +71,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Moniqa', serif;
+  font-family: "Moniqa", serif;
   font-weight: normal;
 }
 
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 .text-thin {
   font-family: Montserrat;
   font-weight: 300;
   font-size: 16px;
-  line-height: 100%;
+  line-height: 22px;
 
   vertical-align: middle;
   color: #111111;
@@ -101,7 +109,13 @@ h6 {
   vertical-align: middle;
   color: #111111;
 }
-
+.title-text {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0%;
+}
 .text-lg {
   font-family: Montserrat;
   font-weight: 600;
@@ -112,11 +126,21 @@ h6 {
   color: #111111;
 }
 
+.text-lg-md {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+
+  vertical-align: middle;
+  color: #111111;
+}
+
 .text-lg-thin {
   font-family: Montserrat;
   font-weight: 400;
   font-size: 18px;
-  line-height: 100%;
+  line-height: 25px;
 
   vertical-align: middle;
   color: #111111;
@@ -138,7 +162,12 @@ h6 {
 
   vertical-align: middle;
 }
-
+.article-collection__title {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
 .title-lg {
   font-family: Moniqa;
   font-weight: 700;
@@ -157,18 +186,34 @@ h6 {
   .title-sm {
     font-size: 36px;
   }
+  .title-text {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: @breakpoint-tablet) {
+  .title-text {
+    font-size: 24px;
+  }
+  .container {
+    padding: 0 20px;
+  }
   .title-sm {
     font-size: 30px;
   }
+  .text-lg-md {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 20pxpx;
+    line-height: 25px;
 
+    vertical-align: middle;
+    color: #111111;
+  }
   .text-md-bold {
     font-family: Montserrat;
     font-weight: 600;
     font-size: 14px;
-    line-height: 100%;
     letter-spacing: 0%;
     vertical-align: middle;
     color: #111111;
@@ -178,17 +223,16 @@ h6 {
     font-family: Montserrat;
     font-weight: 600;
     font-size: 16px;
-    line-height: 100%;
     letter-spacing: 0%;
     vertical-align: middle;
     color: #111111;
   }
 
   .text-lg-thin {
+    line-height: 22px;
     font-family: Montserrat;
     font-weight: 400;
     font-size: 16px;
-    line-height: 100%;
     letter-spacing: 0%;
     vertical-align: middle;
     color: #111111;
@@ -197,7 +241,6 @@ h6 {
     font-family: Montserrat;
     font-weight: 300;
     font-size: 14px;
-    line-height: 100%;
 
     vertical-align: middle;
     color: #111111;

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Интернет-магазин</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__logo">
+          <a href="/" class="logo-link">
+            <img src="../img/logo.svg" alt="Логотип" />
+          </a>
+        </div>
+
+        <div class="header__catalog text-md">
+          <a href="catalog.html" class="header__catalog-link svg-button">
+            <img class="nav__link-img" src="../img/grid.svg" alt="Каталог" />
+            <span class="header__catalog-text">Каталог</span>
+          </a>
+        </div>
+
+        <div class="header__nav header__actions">
+          <a class="action-btn svg-button" href="#">
+            <img
+              class="action-btn__icon"
+              src="../img/heart.svg"
+              alt="Избранное"
+            />
+            <div class="action-btn-text">Избранное</div>
+          </a>
+          <a class="action-btn svg-button" href="#">
+            <img
+              class="action-btn__icon"
+              src="../img/bucket.svg"
+              alt="Корзина"
+            />
+            <div class="action-btn-text">Корзина</div>
+          </a>
+          <a class="action-btn svg-button" href="#">
+            <img
+              class="action-btn__icon"
+              src="../img/log-in.svg"
+              alt="Личный кабинет"
+            />
+            <div class="action-btn-text">Личный кабинет</div>
+          </a>
+        </div>
+        <button class="header__burger" aria-label="Открыть меню"></button>
+      </div>
+    </header>
+  </body>
+</html>
+
+
+<main class="main">
+  <section class="card">
+    <div class="container">
+      <div class="card__inner">
+        <div class="card__top">
+          <div class="card__top_title title-text">
+            Постер Andy Mouse 60-60 см
+          </div>
+          <button class="card__top_mobile">
+            <img src="../img/favorite-active.svg" alt="Избранное" />
+          </button>
+        </div>
+
+        <div class="card__img">
+          <img class="card__image" src="../img/card.png" alt="" class=" " />
+        </div>
+        <div class="card__info">
+          <div class="card__info_price">1 850 ₽</div>
+          <div class="card__info_radio">
+            <label class="filters__label">
+              <input type="radio" name="card-radio" class="filters__radio" />
+              <span class="filters__text text-lg-thin">Бумажный постер</span>
+            </label>
+            <label class="filters__label">
+              <input type="radio" name="card-radio" class="filters__radio" />
+              <span class="filters__text text-lg-thin">Электронный постер</span>
+            </label>
+          </div>
+          <div class="card__info_count">
+            <div class="card__info_count-text text-md-bold">Количество</div>
+            <div class="card__info_count-counter">
+              <button class="card__info_count-button">
+                <img src="../img/plus.svg" alt="" />
+              </button>
+              <button class="card__info_number text-lg-thin">1</button>
+              <button class="card__info_count-button">
+                <img src="../img/minus.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="card__info_buttons">
+            <button class="card__info_button button">Добавить</button>
+            <button class="card__top_descktop">
+              <img src="../img/favorite-active.svg" alt="Избранное" />
+            </button>
+          </div>
+
+          <div class="card__info_delivery">
+            <img src="../img/truck.svg" alt="" />
+            <span class="card__info_delivery-text text-md-bold"
+              >Бесплатная доставка</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="text">
+    <div class="container">
+      <div class="text__inner">
+        <div class="text__top-title text-lg">Описание</div>
+        <p class="text__description text-lg-thin">
+          Энди Маус — серия шелкографических принтов, созданная американским
+          художником Китом Харингом в 1986 году. Персонаж Энди Маус-это сплав
+          диснеевского Микки Мауса и Энди Уорхола.
+        </p>
+        <p class="text__description text-lg-thin">
+          Серия состоит из четырех шелкографических принтов на тканой бумаге,
+          подписанных и датированных карандашом Харингом и Уорхолом.
+        </p>
+        <ul class="text__list">
+          <li class="text__item text-lg-thin">Дата выхода серии 1986 год</li>
+          <li class="text__item text-lg-thin">
+            Идейный вдохновитель — Энди Уорхол
+          </li>
+          <li class="text__item text-lg-thin">Размер постера 60-60 см</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="all-cards">
+    <div class="container">
+      <div class="all-cards__inner">
+        <h3 class="all-cards__title title-sm">Вся серия Andy Mouse 1986</h3>
+
+        <ul class="all-cards__number-list">
+          <li class="all-cards__number-item text-lg-thin">
+            Дата выхода серии 1986 год
+          </li>
+          <li class="all-cards__number-item text-lg-thin">
+            Идейный вдохновитель — Энди Уорхол
+          </li>
+          <li class="all-cards__number-item text-lg-thin">
+            Размер постера 60-60 см
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__top">
+    <a href="#">
+      <img src="../img/logo.svg" alt="" class="footer__top_img"
+    /></a>
+  </div>
+  <div class="container">
+    <div class="footer__bottom">
+      <div class="footer__sections">
+        <div class="footer__left">
+          <div class="footer__section">
+            <div class="footer__section_title text-lg">Каталог</div>
+            <ul class="footer__section_list">
+              <li><a class="text-lg-thin" href="#">Коллекция 1982</a></li>
+              <li><a class="text-lg-thin" href="#">Коллекция 1986</a></li>
+              <li><a class="text-lg-thin" href="#">Коллекция 1987</a></li>
+              <li><a class="text-lg-thin" href="#">Коллекция 1988</a></li>
+              <li><a class="text-lg-thin" href="#">Коллекция 1989</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__section">
+            <div class="footer__section_title text-lg">Покупателю</div>
+            <ul class="footer__section_list">
+              <li><a class="text-lg-thin" href="#">Как сделать заказ</a></li>
+              <li><a class="text-lg-thin" href="#">Правила возврата</a></li>
+              <li><a class="text-lg-thin" href="#">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__section last">
+          <div class="footer__section_title text-lg">На связи</div>
+          <div class="footer__section_links">
+            <a href="" class="footer__section_link">
+              <img src="../img/tg.svg" alt="" />
+            </a>
+            <a href="" class="footer__section_link">
+              <img src="../img/wp.svg" alt="" />
+            </a>
+            <a href="" class="footer__section_link">
+              <img src="../img/vk.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom_links">
+        <div class="footer__section_bottom-title text-md-bold">
+          <a href="# ">Политика конфиденциальности</a>
+        </div>
+
+        <div class="footer__section_bottom-title text-md-bold">
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+</html>
+

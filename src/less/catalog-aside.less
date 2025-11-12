@@ -1,0 +1,440 @@
+.filters__actions_reset-768 {
+  display: none;
+}
+.catalog__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+.filters__actions_reset {
+  text-align: start;
+}
+.filters__actions.modal {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.catalog__title {
+  margin-top: 33px;
+  margin-bottom: 33px;
+}
+.filters__modal {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.filters__modal_title {
+}
+.title-lg {
+}
+.filters__actions_reset {
+}
+.filters__actions_button.button {
+  width: 100%;
+}
+
+.catalog__filters {
+  /* Основные стили контейнера фильтров */
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.filters__group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.filters__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111111;
+  margin: 0;
+}
+.filters__price {
+  max-width: 354px;
+}
+.filters__price-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filters__list {
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 16px 60px;
+}
+
+.filters__item {
+  margin: 0;
+}
+
+/* Кастомные чекбоксы */
+.filters__label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  position: relative;
+}
+/* Скрываем нативные инпуты */
+.filters__checkbox,
+.filters__radio {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.filters__text {
+  display: flex;
+  align-items: center;
+}
+/* Кастомный чекбокс */
+.filters__checkbox + .filters__text::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  position: relative;
+  box-sizing: border-box;
+  /* Иконка для неактивного состояния */
+  background-image: url("../img/box.svg");
+  background-size: 16px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 7px;
+}
+
+.filters__checkbox:checked + .filters__text::before {
+  border-color: transparent;
+  background-color: transparent;
+  /* Иконка для активного состояния */
+  background-image: url("../img/checkbox.svg");
+  background-size: 20px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Кастомные радиокнопки */
+.filters__radio + .filters__text::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  /* Иконка для неактивного состояния */
+  background-image: url("../img/circle.svg");
+  background-size: 16px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 7px;
+}
+
+.filters__radio:checked + .filters__text::before {
+  border-color: transparent;
+  background-color: transparent;
+  /* Иконка для активного состояния */
+  background-image: url("../img/radio.svg");
+  background-size: 20px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Плавные переходы */
+.filters__checkbox + .filters__text::before,
+.filters__radio + .filters__text::before {
+  transition: all 0.2s ease;
+}
+
+.filters__text {
+  user-select: none;
+}
+
+/* Контейнер для ползунка цены */
+.filters__price {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.filters__price-text {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+/* Двойной ползунок */
+.filters__range {
+  position: relative;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  margin: 20px 0;
+}
+
+.filters__range-track {
+  position: absolute;
+  height: 100%;
+  background: #0154bb;
+  border-radius: 2px;
+}
+
+.filters__range-inputs {
+  position: relative;
+}
+
+/* Стилизация ползунков */
+.filters__range-input {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  top: -2px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.filters__range-input::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0154bb;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.filters__range-input::-moz-range-thumb {
+  pointer-events: all;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0154bb;
+  border: 2px solid white;
+
+  cursor: pointer;
+}
+
+.filters__range-input::-webkit-slider-track {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  height: 4px;
+}
+
+.filters__range-input::-moz-range-track {
+  background: transparent;
+  height: 4px;
+  border: none;
+}
+
+/* Кнопки фильтра */
+.filters__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.filters__button {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.filters__button--reset {
+  background: #f8f9fa;
+  color: #666;
+  border: 1px solid #111111;
+}
+
+.filters__button--reset:hover {
+  background: #e9ecef;
+  color: #111111;
+}
+.filters__range {
+  position: relative;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  margin: 20px 0;
+}
+
+.filters__range-track {
+  position: absolute;
+  height: 100%;
+  background: #0154bb;
+  border-radius: 2px;
+  left: 0%;
+  width: 0%;
+}
+
+.filters__range-inputs {
+  position: relative;
+  height: 4px;
+}
+
+.filters__range-input {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  top: -2px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* Остальные стили для thumb остаются такими же как в предыдущем ответе */
+.filters__range-input::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0154bb;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.filters__range-input::-moz-range-thumb {
+  pointer-events: all;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0154bb;
+
+  cursor: pointer;
+}
+
+/* Кнопка для мобильных */
+
+/* Модальный режим для фильтров */
+.catalog__modal {
+  transition: all 0.3s ease;
+}
+
+/* Мобильная версия */
+@media (max-width: 1340px) {
+  .filters-mobile-toggle {
+    display: block;
+  }
+
+  .catalog__modal {
+    padding: 60px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 1000;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .catalog__modal.active {
+    transform: translateX(0);
+  }
+
+  /* Стили для кнопки закрытия в модалке */
+  .catalog__modal::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/close.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1001;
+  }
+}
+@media (min-width: 768px) {
+  .filters__list {
+    max-width: 70%;
+  }
+}
+/* Десктопная версия */
+@media (min-width: 1340px) {
+  .filters__actions.modal {
+    display: none;
+  }
+  .filters__actions_reset.modal {
+    display: none;
+  }
+  .catalog__inner {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .filters__actions {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+    gap: 30px;
+  }
+  .catalog__filters {
+    max-width: 263px;
+  }
+  .catalog__title {
+    margin-bottom: 40px;
+  }
+  .filters__actions_reset-768 {
+    display: block;
+    text-align: left;
+  }
+  .filters__modal {
+    display: none;
+  }
+  .filters-mobile-toggle {
+    display: none !important;
+  }
+
+  .catalog__modal {
+    position: static !important;
+    transform: none !important;
+    background: none !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .catalog__modal::before {
+    display: none !important;
+  }
+}
+@media (min-width: 1340px) {
+  .catalog__title {
+    margin-top: 55px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .catalog__inner {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+  }
+}
