@@ -1,59 +1,72 @@
 // Меню бургер
-class Header {
-    constructor() {
+(function() {
+    'use strict';
+
+    let headerInstance = null;
+
+    const Header = function() {
+        if (headerInstance) {
+            return headerInstance;
+        }
+
         this.burger = document.querySelector('.header__burger');
         this.nav = document.querySelector('.header__nav');
         this.body = document.body;
-        this.init();
-    }
+        
+        if (this.burger && this.nav) {
+            this.init();
+            headerInstance = this;
+        }
+        
+        return this;
+    };
 
-    init() {
+    Header.prototype.init = function() {
         this.bindEvents();
-    }
+    };
 
-    bindEvents() {
-        // Клик по бургеру
-        this.burger.addEventListener('click', () => {
-            this.toggleMenu();
+    Header.prototype.bindEvents = function() {
+        const self = this;
+
+        this.burger.addEventListener('click', function() {
+            self.toggleMenu();
         });
 
-        // Клик по ссылке в меню (закрывает меню на мобильных)
-        this.nav.addEventListener('click', (e) => {
+        this.nav.addEventListener('click', function(e) {
             if (e.target.classList.contains('nav__link')) {
-                this.closeMenu();
+                self.closeMenu();
             }
         });
 
-        // Закрытие меню при клике вне области
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.header') && this.nav.classList.contains('active')) {
-                this.closeMenu();
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.header') && self.nav.classList.contains('active')) {
+                self.closeMenu();
             }
         });
 
-        // Закрытие меню при ресайзе окна (если перешли с мобильного на десктоп)
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                this.closeMenu();
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && self.nav.classList.contains('active')) {
+                self.closeMenu();
             }
         });
-    }
+    };
 
-    toggleMenu() {
+    Header.prototype.toggleMenu = function() {
         this.burger.classList.toggle('active');
         this.nav.classList.toggle('active');
         this.body.classList.toggle('menu-open');
-    }
+    };
 
-    closeMenu() {
+    Header.prototype.closeMenu = function() {
         this.burger.classList.remove('active');
         this.nav.classList.remove('active');
         this.body.classList.remove('menu-open');
-    }
-}
+    };
 
-// Инициализация при загрузке DOM
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Header initialized');
-    new Header();
-});
+    // Инициализация при загрузке DOM
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Header initialized');
+        new Header();
+    });
+
+})();

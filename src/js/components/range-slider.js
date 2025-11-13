@@ -17,14 +17,14 @@
       const minVal = parseInt(minInput.min);
       const maxVal = parseInt(maxInput.max);
       
-      // Вычисляем позицию и ширину трека
+
       const start = ((min - minVal) / (maxVal - minVal)) * 100;
       const width = ((max - min) / (maxVal - minVal)) * 100;
       
       track.style.left = start + '%';
       track.style.width = width + '%';
       
-      // Обновляем текст
+ 
       if (priceTextLeft) {
         priceTextLeft.textContent = `от ${min}`;
       }
@@ -33,7 +33,7 @@
       }
     }
     
-    // Обработчики событий
+
     minInput.addEventListener('input', function() {
       const minVal = parseInt(this.value);
       const maxVal = parseInt(maxInput.value);

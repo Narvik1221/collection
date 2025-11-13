@@ -5,6 +5,7 @@ const uglify = require('gulp-uglify');
 const connect = require('gulp-connect');
 const cleanCSS = require('gulp-clean-css');
 const fileInclude = require('gulp-file-include');
+const autoprefixer = require('gulp-autoprefixer').default;
 
 // HTML обработка
 gulp.task('html', function() {
@@ -17,10 +18,14 @@ gulp.task('html', function() {
     .pipe(connect.reload());
 });
 
-// LESS компиляция
+// LESS компиляция с автопрефиксером
 gulp.task('less', function() {
   return gulp.src('src/less/main.less')
     .pipe(less())
+    .pipe(autoprefixer({ // ← ДОБАВЬТЕ ЭТОТ БЛОК
+      cascade: false,
+      grid: true // для поддержки CSS Grid
+    }))
     .pipe(cleanCSS())
     .pipe(concat('style.min.css'))
     .pipe(gulp.dest('dist/css/'))
@@ -31,7 +36,6 @@ gulp.task('less', function() {
 gulp.task('js', function() {
   return gulp.src([
       'src/js/components/*.js',
-      'src/js/main.js'
     ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
@@ -77,6 +81,6 @@ gulp.task('watch', function() {
   gulp.watch('src/data/**/*', gulp.series('data'));
 });
 
-// ОДНА задача build (уберите дубликаты)
+// Задача build
 gulp.task('build', gulp.parallel('html', 'less', 'js', 'fonts', 'images', 'data'));
 gulp.task('default', gulp.parallel('build', 'serve', 'watch'));

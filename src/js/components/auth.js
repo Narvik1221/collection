@@ -97,7 +97,7 @@
                 $(element).removeClass('error');
             },
             submitHandler: function(form) {
-                // В реальном приложении здесь будет отправка формы
+            
                 alert('Форма успешно отправлена!');
                 return false; // Запрещаем реальную отправку для демо
             }

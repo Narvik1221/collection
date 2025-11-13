@@ -1,31 +1,39 @@
-function initSlider() {
-    const sliderElement = document.querySelector('.main-slider');
-    
-    if (!sliderElement) return;
-    
-    const mainSlider = new Swiper('.main-slider', {
-        // Автоматическое количество слайдов
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        loop: true,
-      
-        
-        // Навигация стрелками
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+(function() {
+    'use strict';
 
-        // Эффекты
-        effect: 'slide',
-        speed: 600,
+    document.addEventListener('DOMContentLoaded', function() {
+        const sliderElement = document.querySelector('.main-slider');
         
-        // Автопрокрутка
-        // autoplay: {
-        //     delay: 5000,
-        //     disableOnInteraction: false,
-        // },
+        if (!sliderElement) return;
+        
+        if (typeof Swiper === 'undefined') {
+            console.error('Swiper is not loaded');
+            return;
+        }
+
+        try {
+            const mainSlider = new Swiper('.main-slider', {
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                loop: true,
+                
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                effect: 'slide',
+                speed: 600,
+                
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+            });
+
+        } catch (error) {
+            console.error('Error initializing slider:', error);
+        }
     });
 
-    console.log('Слайдер инициализирован');
-}
+})();
