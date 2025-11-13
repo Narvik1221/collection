@@ -6,25 +6,30 @@
   scale: 0.68;
 }
 .product-card {
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  max-width: 360px;
-  aspect-ratio: 1;
   display: flex;
   position: relative;
   flex-direction: column;
   gap: 24px;
   padding: 15px 30px;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1;
   border: 1px solid #e7e7e7;
   min-width: 280px;
   transition: all 0.2s ease;
 }
-
+.modal-button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .product-card:hover {
   box-shadow: 0px 0px 50px 0px #00000026;
 }
 .product-card__img {
+  margin-bottom: 36px;
   flex-grow: 1;
   display: flex;
   justify-content: center;
@@ -35,6 +40,8 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  position: absolute;
+  bottom: 18px;
 }
 .product-card__price {
 }
@@ -63,8 +70,9 @@
   gap: 30px;
 }
 .pagination__button {
+  transition: all 0.2s ease;
   width: 8px;
-
+  cursor: pointer;
   aspect-ratio: 1;
   font-size: 0;
   line-height: 0;
@@ -75,18 +83,30 @@
   justify-content: center;
   align-items: center;
 }
+.pagination__button:hover {
+  color: #0154bb;
+}
 .pagination__button.right {
   transform: rotate(180deg);
 }
 
 .pagination__page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  transition: all 0.2s ease;
   cursor: pointer;
 }
 .pagination__pages {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 6px;
 }
+.pagination__page:hover,
 .active-page {
   display: flex;
   justify-content: center;
@@ -99,6 +119,9 @@
 }
 
 @media (min-width: 768px) {
+  .product-card {
+    max-width: 360px;
+  }
   .pagination {
     gap: 50px;
     justify-content: flex-start;
@@ -123,6 +146,9 @@
   }
 }
 @media (min-width: 1340px) {
+  .modal-button {
+    display: none !important;
+  }
   .products-grid {
     display: grid;
     grid-template-columns: repeat(3, 323px);

@@ -27,7 +27,11 @@
 @import "catalog-aside.less";
 @import "card.less";
 @import "card-text.less";
+@import "all-cards.less";
+@import "auth.less";
+@import "./components/breadcrumbs.less";
 body {
+  background-color: #f3f3f3;
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
@@ -135,7 +139,15 @@ h6 {
   vertical-align: middle;
   color: #111111;
 }
+.text-md-thin {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
 
+  vertical-align: middle;
+  color: #111111;
+}
 .text-lg-thin {
   font-family: Montserrat;
   font-weight: 400;
@@ -237,6 +249,17 @@ h6 {
     vertical-align: middle;
     color: #111111;
   }
+
+  .text-md-thin {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    vertical-align: middle;
+    color: #111111;
+  }
+
   .text-thin {
     font-family: Montserrat;
     font-weight: 300;

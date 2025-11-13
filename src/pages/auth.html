@@ -1,0 +1,183 @@
+@@include('../includes/header.html')
+
+<main class="main">
+  <section>
+    <div class="container">
+      <div class="auth-container">
+        <div class="auth-header">
+          <h1 class="auth-title title-md">Регистрация</h1>
+          <div class="auth-subtitle">
+            <div class="text-lg-thin">Уже есть авторизованный аккаунт?</div>
+
+            <a href="#" class="auth-link">Войти</a>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <form id="registration-form" class="registration-form">
+          <div class="form-columns">
+            <div class="form-group">
+              <label for="email" class="form-label text-lg-thin"
+                >E-mail <span class="requierd">*</span></label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                placeholder="Введи свой e-mail"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="name" class="form-label text-lg-thin"
+                >Имя<span class="requierd">*</span></label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-input"
+                placeholder="Укажи имя"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password" class="form-label text-lg-thin"
+                >Пароль<span class="requierd">*</span>
+              </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-input"
+                placeholder="Придумай пароль"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="confirm-password" class="form-label text-lg-thin"
+                >Подтверждение пароля<span class="requierd">*</span></label
+              >
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                class="form-input"
+                placeholder="Повтори пароль"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone" class="form-label text-lg-thin">Телефон</label>
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                class="form-input"
+                placeholder="Укажи свой телефон"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="surname" class="form-label text-lg-thin"
+                >Фамилия</label
+              >
+              <input
+                type="text"
+                id="surname"
+                name="surname"
+                class="form-input"
+                placeholder="Укажи фамилию"
+              />
+            </div>
+            <div class="form-group">
+              <label for="country" class="form-label text-lg-thin"
+                >Страна</label
+              >
+              <select id="country" name="country" class="form-select">
+                <option value="">Россия</option>
+                <option value="RU">Россия</option>
+                <option value="BY">Беларусь</option>
+                <option value="KZ">Казахстан</option>
+                <option value="UA">Украина</option>
+                <option value="EN">Великобритания</option>
+                <option value="CH">Китай</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label text-lg-thin">Дата рождения</label>
+              <div class="date-picker-container">
+                <input
+                  type="text"
+                  class="date-input"
+                  id="day"
+                  placeholder="ДД"
+                  maxlength="2"
+                />
+
+                <input
+                  type="text"
+                  class="date-input"
+                  id="month"
+                  placeholder="ММ"
+                  maxlength="2"
+                />
+
+                <input
+                  type="text"
+                  class="date-input"
+                  id="year"
+                  placeholder="ГГ"
+                  maxlength="4"
+                />
+                <button
+                  type="button"
+                  class="calendar-button"
+                  id="calendarButton"
+                >
+                  <img src="../img/calendar.svg" alt="" />
+                </button>
+              </div>
+
+              <input type="hidden" id="hiddenDate" />
+            </div>
+          </div>
+
+          <div class="form-group checkbox-group filters__label">
+            <input
+              type="checkbox"
+              id="agree"
+              name="agree"
+              class="filters__checkbox form-group__checkbox"
+              required
+            />
+            <label
+              for="agree"
+              class="checkbox-label text-md-thin filters__text"
+            >
+              <div class="checkbox-label__text">
+                Нажимая «Создать аккаунт», я подтверждаю, что ознакомился с
+                положениями, указанными в статьях
+                <a href="#" class="text-link">Условия использования</a> и
+                <a href="#" class="text-link">Политика конфиденциальности</a>.
+              </div>
+            </label>
+          </div>
+
+          <button type="submit" class="submit-button button">
+            Создать аккаунт
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="auth.js"></script>
+    <script src="datepicker.js"></script>
+  </section>
+</main>
+
+@@include('../includes/footer.html')

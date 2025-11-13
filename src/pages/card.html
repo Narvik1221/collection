@@ -3,6 +3,14 @@
 <main class="main">
   <section class="card">
     <div class="container">
+      <div class="breadcrumbs">
+        <a class="breadcrumbs__link" href="/"> Главная</a>
+        <a class="breadcrumbs__link" href="catalog.html">/ Каталог</a>
+        <span class="breadcrumbs__last"> / Постер Andy Mouse | 60-60 см</span>
+        <a href="/" class="breadcrumbs__button">
+          <img src="../img/arrow-left.svg" alt="" />
+        </a>
+      </div>
       <div class="card__inner">
         <div class="card__top">
           <div class="card__top_title title-text">
@@ -13,7 +21,7 @@
           </button>
         </div>
 
-        <div class="card__img">
+        <div class="card__img card__modal">
           <img class="card__image" src="../img/card.png" alt="" class=" " />
         </div>
         <div class="card__info">
@@ -87,18 +95,173 @@
 
         <ul class="all-cards__number-list">
           <li class="all-cards__number-item text-lg-thin">
-            Дата выхода серии 1986 год
+            1. Andy Mouse Green
           </li>
           <li class="all-cards__number-item text-lg-thin">
-            Идейный вдохновитель — Энди Уорхол
+            2. Andy Mouse Orange
           </li>
           <li class="all-cards__number-item text-lg-thin">
-            Размер постера 60-60 см
+            3. Andy Mouse Blue
+          </li>
+          <li class="all-cards__number-item text-lg-thin">
+            3. Andy Mouse Blue
+          </li>
+          <li class="all-cards__number-item text-lg-thin">
+            4. Andy Mouse Yellow
+          </li>
+          <li class="all-cards__number-item text-lg-thin">
+            5. Andy Mouse Green B
           </li>
         </ul>
+
+        <div class="all-cards__content">
+          <a href="#" class="product-card all-cards__card all-cards__green">
+            <div class="product-card__img">
+              <img
+                class="product-card__image"
+                src="../img/card-green.png"
+                alt=""
+              />
+            </div>
+            <div class="product-card__info">
+              <div class="product-card__price text-md-bold">1850 ₽</div>
+              <p class="product-card__description">
+                <span>Постер </span>| 60-60 см
+              </p>
+            </div>
+
+            <button class="product-card__bucket action-btn svg-button">
+              <img
+                class="action-btn__icon"
+                src="../img/heart.svg"
+                alt="Избранное"
+              />
+            </button>
+            <button class="product-card__favorite action-btn svg-button">
+              <img
+                class="action-btn__icon"
+                src="../img/bucket.svg"
+                alt="Корзина"
+              />
+            </button>
+          </a>
+          <a
+            href="#"
+            class="product-card all-cards__card all-cards__orange size-768"
+          >
+            <div class="product-card__img">
+              <img
+                class="product-card__image"
+                src="../img/card-orange.png"
+                alt=""
+              />
+            </div>
+            <div class="product-card__info">
+              <div class="product-card__price text-md-bold">1850 ₽</div>
+              <p class="product-card__description">
+                <span>Постер </span>| 60-60 см
+              </p>
+            </div>
+
+            <button class="product-card__bucket action-btn svg-button">
+              <img
+                class="action-btn__icon"
+                src="../img/heart.svg"
+                alt="Избранное"
+              />
+            </button>
+            <button class="product-card__favorite action-btn svg-button">
+              <img
+                class="action-btn__icon"
+                src="../img/bucket.svg"
+                alt="Корзина"
+              />
+            </button>
+          </a>
+          <a
+            href="#"
+            class="product-card all-cards__card all-cards__blue size-1340"
+          >
+            <div class="product-card__img">
+              <img
+                class="product-card__image"
+                src="../img/card-blue.png"
+                alt=""
+              />
+            </div>
+            <div class="product-card__info">
+              <div class="product-card__price text-md-bold">1850 ₽</div>
+              <p class="product-card__description">
+                <span>Постер </span>| 60-60 см
+              </p>
+            </div>
+
+            <button class="product-card__bucket action-btn svg-button">
+              <img
+                class="action-btn__icon"
+                src="../img/heart.svg"
+                alt="Избранное"
+              />
+            </button>
+            <button class="product-card__favorite action-btn svg-button">
+              <img
+                class="action-btn__icon"
+                src="../img/bucket.svg"
+                alt="Корзина"
+              />
+            </button>
+          </a>
+          <a
+            href="#"
+            class="product-card all-cards__card all-cards__yellow size-1340"
+          >
+            <div class="product-card__img">
+              <img
+                class="product-card__image"
+                src="../img/card-yellow.png"
+                alt=""
+              />
+            </div>
+            <div class="product-card__info">
+              <div class="product-card__price text-md-bold">1850 ₽</div>
+              <p class="product-card__description">
+                <span>Постер </span>| 60-60 см
+              </p>
+            </div>
+
+            <button class="product-card__bucket action-btn svg-button">
+              <img
+                class="action-btn__icon"
+                src="../img/heart.svg"
+                alt="Избранное"
+              />
+            </button>
+            <button class="product-card__favorite action-btn svg-button">
+              <img
+                class="action-btn__icon"
+                src="../img/bucket.svg"
+                alt="Корзина"
+              />
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   </section>
+  <div class="modal" id="imageModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <div class="modal__image-container">
+        <button class="modal__close">
+          <img src="../img/close.svg" alt="Закрыть" />
+        </button>
+        <div class="card__img modal__image">
+          <img class="card__image" src="../img/card.png" alt="" class=" " />
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="modal-image.js"></script>
 </main>
 
 @@include('../includes/footer.html')
