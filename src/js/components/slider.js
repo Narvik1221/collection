@@ -23,12 +23,9 @@
                 },
 
                 effect: 'slide',
-                speed: 600,
+
                 
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                },
+
             });
 
         } catch (error) {
