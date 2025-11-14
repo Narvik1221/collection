@@ -5,7 +5,8 @@ const uglify = require('gulp-uglify');
 const connect = require('gulp-connect');
 const cleanCSS = require('gulp-clean-css');
 const fileInclude = require('gulp-file-include');
-const autoprefixer = require('gulp-autoprefixer').default;
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
 
 // HTML обработка
 gulp.task('html', function() {
@@ -22,10 +23,12 @@ gulp.task('html', function() {
 gulp.task('less', function() {
   return gulp.src('src/less/main.less')
     .pipe(less())
-    .pipe(autoprefixer({ // ← ДОБАВЬТЕ ЭТОТ БЛОК
-      cascade: false,
-      grid: true // для поддержки CSS Grid
-    }))
+    .pipe(postcss([
+      autoprefixer({
+        cascade: false,
+        grid: true
+      })
+    ]))
     .pipe(cleanCSS())
     .pipe(concat('style.min.css'))
     .pipe(gulp.dest('dist/css/'))
